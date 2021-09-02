@@ -1,2 +1,51 @@
-[README.md](https://github.com/zjy2050/HDPR-ReID/files/7096025/README.md)
 # HDPR-ReID
+![Python >=3.6](https://img.shields.io/badge/Python->=3.6-blue.svg)
+![PyTorch >=1.6](https://img.shields.io/badge/PyTorch->=1.6-yellow.svg)
+
+# Hybrid Dynamic Contrastive and Regression Learning for Unsupervised Person Re-Identification (HDCRL)
+
+The *official* repository for *Hybrid Dynamic Contrastive and Regression Learning for Unsupervised Person Re-Identification*. 
+`HDCRL` achieves state-of-the-art performances on both **unsupervised learning** tasks and **unsupervised domain adaptation** tasks for person re-ID.
+For now, we could only release the test code and model already trained. We will gradually release our training code as the paper delivered.
+
+## Prepare Datasets
+
+We use 4 datasets in our train and test, including Market1501, DukeMTMC-ReID, MSMT17, PersonX.
+Please unzip the datasets under the diretory like 
+```
+HDCRL-ReID/data
+├── market1501
+│   └── Market-1501-v15.09.15
+├── msmt17
+│   └── MSMT17_V1
+├── personx
+│   └── PersonX
+└── duke
+    └── DukeMTMC-reID
+```
+
+## Evaluation
+
+We utilize 1 tesla v100 GPU for testing.
+
+### Unsupervised Learning
+
+To evaluate the model released, run:
+```shell
+CUDA_VISIBLE_DEVICES=0 \
+python test.py -d $DATASET \
+  --resume $PATH_OF_MODEL
+```
+
+## Results
+
+| Datasets | mAP(%)	| R@1(%)	| R@5(%)	| R@10(%) |
+|---------|---------|---------|---------|---------|
+| Market1501 | 81.6 | 92.6 | 97.4 | 98.2 |
+| DukeMTMC | 69.0 | 82.9 | 90.9 | 93 |
+| PersonX | 84.1 | 94.4 | 98.7 | 99.5 |
+| MSMT17 | 24.6 | 50.2 | 61.4 | 65.7 |
+
+## Acknowledgements
+
+Thanks to [SpCL](https://github.com/yxgeee/SpCL). 
