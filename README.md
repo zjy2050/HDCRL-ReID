@@ -1,4 +1,4 @@
-# HDPR-ReID
+# HDCRL-ReID
 ![Python >=3.6](https://img.shields.io/badge/Python->=3.6-blue.svg)
 ![PyTorch >=1.6](https://img.shields.io/badge/PyTorch->=1.6-yellow.svg)
 
