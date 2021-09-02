@@ -48,4 +48,4 @@ python test.py -d $DATASET \
 
 ## Acknowledgements
 
-Thanks to [SpCL](https://github.com/yxgeee/SpCL). 
+Thanks to [SpCL](https://github.com/yxgeee/SpCL). It is an excellent USL framework and deeply inspires our work.
