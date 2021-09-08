@@ -28,6 +28,10 @@ HDCRL-ReID/data
 
 We utilize 1 tesla v100 GPU for testing.
 
+### Download Models
+
+You can download model for market1501, duke and personx from [Here](https://pan.baidu.com/s/1ec7hNC_eY86S8eqNZiMeAA)
+
 ### Unsupervised Learning
 
 To evaluate the model released, run:
