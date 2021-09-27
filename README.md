@@ -1,11 +1,11 @@
-# HDCRL-ReID
+# HDCPD-ReID
 ![Python >=3.6](https://img.shields.io/badge/Python->=3.6-blue.svg)
 ![PyTorch >=1.6](https://img.shields.io/badge/PyTorch->=1.6-yellow.svg)
 
-# Hybrid Dynamic Contrastive and Regression Learning for Unsupervised Person Re-Identification (HDCRL)
+# Hybrid Dynamic Contrast and Probability Distillation for Unsupervised Person Re-Id (HDCPD)
 
-The *official* repository for *Hybrid Dynamic Contrastive and Regression Learning for Unsupervised Person Re-Identification*. 
-`HDCRL` achieves state-of-the-art performances on both **unsupervised learning** tasks and **unsupervised domain adaptation** tasks for person re-ID.
+The *official* repository for *Hybrid Dynamic Contrast and Probability Distillation for Unsupervised Person Re-Id*. 
+`HDCPD` achieves state-of-the-art performances on both **unsupervised learning** tasks and **unsupervised domain adaptation** tasks for person re-ID.
 For now, we could only release the test code and model already trained. We will gradually release our training code as the paper delivered.
 
 ## Prepare Datasets
@@ -13,7 +13,7 @@ For now, we could only release the test code and model already trained. We will 
 We use 4 datasets in our train and test, including Market1501, DukeMTMC-ReID, MSMT17, PersonX.
 Please unzip the datasets under the diretory like 
 ```
-HDCRL-ReID/data
+HDCPD-ReID/data
 ├── market1501
 │   └── Market-1501-v15.09.15
 ├── msmt17
