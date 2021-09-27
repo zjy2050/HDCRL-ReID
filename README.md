@@ -30,7 +30,7 @@ We utilize 1 tesla v100 GPU for testing.
 
 ### Download Models
 
-You can download model for market1501, duke and personx from [Here](https://pan.baidu.com/s/1XnynYhopFchqa4w9qW8LIg) with estr
+You can download model for market1501, duke and personx from [Here](https://pan.baidu.com/s/1XnynYhopFchqa4w9qW8LIg) with access code estr
 
 ### Unsupervised Learning
 
