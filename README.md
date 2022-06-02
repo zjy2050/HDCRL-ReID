@@ -23,6 +23,18 @@ HDCPD-ReID/data
 └── duke
     └── DukeMTMC-reID
 ```
+## Training
+We utilize 2 tesla v100 GPU for training
+
+To recover UDA results, run:
+```shell
+sh uda.sh
+```
+
+To recover USL results, run:
+```shell
+sh usl.sh
+```
 
 ## Evaluation
 
@@ -40,6 +52,10 @@ CUDA_VISIBLE_DEVICES=0 \
 python test.py -d $DATASET \
   --resume $PATH_OF_MODEL
 ```
+
+## Addition
+
+To recover "Ours+ClusterContrast" results, see "ours+cc" profiles.
 
 ## Results
 
