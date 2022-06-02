@@ -4,7 +4,7 @@
 
 # Hybrid Dynamic Contrast and Probability Distillation for Unsupervised Person Re-Id (HDCPD)
 
-The *official* repository for *Hybrid Dynamic Contrast and Probability Distillation for Unsupervised Person Re-Id*. 
+The *official* repository for [*Hybrid Dynamic Contrast and Probability Distillation for Unsupervised Person Re-Id*](https://ieeeplore.ieee.org/document/9765363). 
 `HDCPD` achieves state-of-the-art performances on both **unsupervised learning** tasks and **unsupervised domain adaptation** tasks for person re-ID.
 For now, we could only release the test code and model already trained. We will gradually release our training code as the paper delivered.
 
