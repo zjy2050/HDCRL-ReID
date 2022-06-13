@@ -155,7 +155,7 @@ class Trainer_USL(object):
             loss.backward()
             optimizer.step()
 
-            # self._update_ema_variables(self.encoder, self.encoder_ema, self.alpha, epoch * len(data_loader) + i)
+            self._update_ema_variables(self.encoder, self.encoder_ema, self.alpha, epoch * len(data_loader) + i)
 
             losses_h.update(loss_h.item())
             losses_m.update(loss_m.item())
