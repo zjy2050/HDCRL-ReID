@@ -122,12 +122,3 @@ class ClusterMemory(nn.Module, ABC):
 
         loss_con = F.cross_entropy(outputs, targets)
         return loss_con, loss_mse
-
-        # B = inputs.size(0)
-        theta = torch.acos(outputs/10)
-        numerator = torch.exp(torch.cos(theta + 0) / self.temp)
-        denominator = torch.sum(torch.exp(torch.cos(theta)/self.temp), dim=1, keepdim=True) - torch.exp(torch.cos(theta)/self.temp) + numerator
-        print(F.nll_loss(numerator, targets), F.nll_loss(denominator, targets))        
-        L = torch.log(torch.div(denominator, numerator))
-        loss = F.nll_loss(L, targets)
-        return loss, loss_mse
