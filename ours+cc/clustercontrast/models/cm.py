@@ -115,7 +115,7 @@ class ClusterMemory(nn.Module, ABC):
             outputs = cm(inputs, targets, self.features, self.momentum)
         outputs /= self.temp
 
-        inputs2 = F.normalize(inputs, dim=1).cuda()
+        inputs2 = F.normalize(inputs2, dim=1).cuda()
         regression = inputs2.mm(self.features.t()) /self.temp
 
         loss_mse = softmax_mse_loss(outputs.t().contiguous(), regression.t().contiguous())
