@@ -98,15 +98,15 @@ class ClusterMemory(nn.Module, ABC):
             - Sends gradients to inputs but not the targets.
             """
             assert input_logits.size() == target_logits.size()
-            # input_softmax = F.softmax(input_logits, dim=1)
-            # target_softmax = F.softmax(target_logits, dim=1)
+            input_softmax = F.softmax(input_logits, dim=1)
+            target_softmax = F.softmax(target_logits, dim=1)
             
             # target_softmax = target_softmax ** 2
             # target_softmax = target_softmax / torch.sum(target_softmax, dim=0).expand_as(target_softmax)
             
             num_classes = input_logits.size()[1]
-            # return F.mse_loss(input_softmax, target_softmax, reduction='sum') / num_classes
-            return F.mse_loss(input_logits, target_logits, reduction='sum') / num_classes
+            return F.mse_loss(input_softmax, target_softmax, reduction='sum') / num_classes
+            # return F.mse_loss(input_logits, target_logits, reduction='sum') / num_classes
 
         inputs = F.normalize(inputs, dim=1).cuda()
         if self.use_hard:
